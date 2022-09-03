@@ -13,6 +13,7 @@ import Header from './Header.jsx';
 import AppBar from '@material-ui/core/AppBar';
 import { makeStyles } from '@material-ui/core/styles';
 
+// To customize styling of Tab.
 const CustomTab = makeStyles({
   root: {
     textTransform: "none",
@@ -20,6 +21,8 @@ const CustomTab = makeStyles({
   }
 });
 
+
+// To create custom TabPanel.
 function TabPanel(props) {
   const { children, value, index } = props;
 
@@ -39,12 +42,14 @@ function TabPanel(props) {
   );
 }
 
+// To declare custom TabPanel props types.
 TabPanel.propTypes = {
   children: PropTypes.node,
   index: PropTypes.any.isRequired,
   value: PropTypes.any.isRequired,
 };
 
+// creating and setting accessibility props for tabs. 
 function a11yProps(index) {
   return {
     id: `scrollable-force-tab-${index}`,
@@ -52,6 +57,7 @@ function a11yProps(index) {
   };
 }
 
+// Application entry point.
 const App = () => {
 
   const classes = CustomTab();
@@ -61,13 +67,16 @@ const App = () => {
   const flag = true;
 
   useEffect(() => {
+    // To make default Rest API call when view is loaded.
     getAllActivityFeeds().then(data =>setactivityFeeds(data.data));   
   }, []);
 
+  // To handle tabs change by user.
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
+  // To Make refresh Rest API call when feed is archive or unarchive.
   const refresh = () => {
     getAllActivityFeeds().then(data =>setactivityFeeds(data.data));   
   }
