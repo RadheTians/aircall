@@ -10,10 +10,9 @@
 }
 
 #app .container {
-  width: 376px;
-  height: 666px;
+  width: 26.5rem;
+  height: 40rem;
   z-index: 100;
-
   background: white;
   border-radius: 3px;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, .9);
@@ -23,3 +22,14 @@
   padding: 20px;
 }
 
+.vertical-ctr {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.vertical-scroll {
+  height: 32rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
