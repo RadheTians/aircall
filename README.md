@@ -2,6 +2,14 @@
 
 The application is published at Netlify [click here](https://master--aircall-next-gen.netlify.app/) to see the glance of it.
 
+Dependencies that are used:-
+
+- **Material-core**: ^4.12.4
+- **Material-icon**: ^4.11.3
+- **Axios**: ^0.27.2
+- **Moment**: ^2.29.4
+- **Bootstrap**: 5.0.2
+
 Attention:- Kindly note that [npm](https://www.npmjs.com/) is used to developed this application.
 
 ## Summary
