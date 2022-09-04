@@ -84,10 +84,10 @@ const App = () => {
   return (
     <div className='container'>
       <div className="row">
-        <div className="col-md-3 col-sm-3">
+        <div className="col-md-3 col-sm-3 col-mo-3">
           <Header/>
         </div>
-        <div className="col-md-9 col-sm-9">
+        <div className="col-md-9 col-sm-9 col-mo-9">
           <Tabs
             value={value}
             onChange={handleChange}

@@ -27,8 +27,45 @@
   align-items: center;
   height: 100%;
 }
+
+@media (max-width: 767.98px) { 
+  .vertical-scroll {
+    height: 40rem !important;
+  }
+ }
 .vertical-scroll {
   height: 32rem;
   overflow-y: scroll;
   overflow-x: hidden;
+  
 }
+
+/* Defining grid system for mobile size devices */
+
+@media (max-width: 575.98px) { 
+
+  .col-mo-2 {
+    width: 16.67%;
+  }
+
+  .col-mo-3 {
+    width: 25%;
+  }
+
+  .col-mo-4 {
+    width: 33.33%;
+  }
+
+  .col-mo-7 {
+    width: 58.33%;
+  }
+
+  .col-mo-8 {
+    width: 66.67%;
+  }
+
+  .col-mo-9 {
+    width: 75%;
+  }
+
+ }

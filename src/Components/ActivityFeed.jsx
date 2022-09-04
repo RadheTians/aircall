@@ -92,13 +92,13 @@ const ActivityFeed= (props) => {
              <CardActionArea>
                <CardContent>
                  <div className="row">
-                   <div className="col-md-2 col-sm-2">
+                   <div className="col-md-2 col-sm-2 col-mo-2">
                      <div className="vertical-ctr">
                        {activity.call_type === 'missed' ? <PhoneMissedIcon  color="primary" />: activity.call_type === 'voicemail' ? <VoicemailIcon color="primary"/>:<CallReceivedIcon color="primary"/>}
      
                      </div>
                    </div>
-                   <div className="col-md-7 col-sm-7">
+                   <div className="col-md-7 col-sm-7 col-mo-7">
                    <Typography gutterBottom variant="h5" component="p">
                  {activity.direction === 'inbound' ? activity.from: activity.to}
                  </Typography>
@@ -106,7 +106,7 @@ const ActivityFeed= (props) => {
                  Tried to call {activity.direction === 'inbound' ? activity.to : activity.from}
                  </Typography>
                    </div>
-                   <div className="col-md-3 col-sm-3">
+                   <div className="col-md-3 col-sm-3 col-mo-3">
                    <Typography variant="caption" component="p">
                    {moment(activity.created_at).format('hh:mm A')}
                  </Typography>
@@ -132,27 +132,24 @@ const ActivityFeed= (props) => {
              <Collapse in={expanded ===  activity.id} timeout="auto" unmountOnExit>
              <CardContent>
               <div className="row">
-                <div className="col-md-8 col-sm-8">
-                <Typography paragraph>
-              {activity.id}
-             </Typography>
+                <div className="col-md-8 col-sm-8 col-mo-8">
+                  <Typography paragraph>
+                    {activity.id}
+                  </Typography>
                 </div>
-                <div className="col-md-4 col-sm-4">
-                <Typography paragraph>
+                <div className="col-md-4 col-sm-4 col-mo-4">
+                  <Typography paragraph>
               
-              {activity.via}
-             </Typography>
+                    {activity.via}
+                  </Typography>
                 </div>
-                <div className="col-md-8 col-sm-8">
+                <div className="col-md-8 col-sm-8 col-mo-8">
                 <Typography paragraph>
               
               {activity.duration} seconds
             </Typography>
                 </div>
               </div>
-           
-             
-           
              </CardContent>
              
              </Collapse>
