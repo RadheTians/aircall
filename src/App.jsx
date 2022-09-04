@@ -84,22 +84,22 @@ const App = () => {
   return (
     <div className='container'>
       <div className="row">
-        <div className="col-md-3">
-        <Header/>
+        <div className="col-md-3 col-sm-3">
+          <Header/>
         </div>
-        <div className="col-md-9">
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          indicatorColor="secondary"
-          textColor="primary"
-          variant="standard"
+        <div className="col-md-9 col-sm-9">
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            indicatorColor="secondary"
+            textColor="primary"
+            variant="standard"
+            
+          >
+            <Tab className={classes.root} label="Activity Feed" icon={<LocalActivityIcon />} {...a11yProps(0)} />
+            <Tab className={classes.root} label="Archive" icon={<ArchiveIcon />} {...a11yProps(1)} />
           
-        >
-          <Tab className={classes.root} label="Activity Feed" icon={<LocalActivityIcon />} {...a11yProps(0)} />
-          <Tab className={classes.root} label="Archive" icon={<ArchiveIcon />} {...a11yProps(1)} />
-         
-        </Tabs>
+          </Tabs>
         </div>
       </div>
       

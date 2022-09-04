@@ -11,9 +11,8 @@
 
 #app .container {
   width: 26.5rem;
-  height: 40rem;
   z-index: 100;
-  background: white;
+  background: whitesmoke;
   border-radius: 3px;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, .9);
 }
