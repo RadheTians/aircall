@@ -99,12 +99,12 @@ const ActivityFeed= (props) => {
                      </div>
                    </div>
                    <div className="col-md-7 col-sm-7 col-mo-7">
-                   <Typography gutterBottom variant="h5" component="p">
-                 {activity.direction === 'inbound' ? activity.from: activity.to}
-                 </Typography>
-                 <Typography variant="caption"  >
-                 Tried to call {activity.direction === 'inbound' ? activity.to : activity.from}
-                 </Typography>
+                      <p className='fw-bold'>
+                        {activity.direction === 'inbound' ? activity.from: activity.to}
+                      </p>
+                      <p className='fw-light'style={{fontSize: 12}} >
+                        {activity.direction === 'inbound' ? "Tried to call " + activity.to : "Received a ring from " + activity.from}
+                      </p>
                    </div>
                    <div className="col-md-3 col-sm-3 col-mo-3">
                    <Typography variant="caption" component="p">
@@ -132,22 +132,20 @@ const ActivityFeed= (props) => {
              <Collapse in={expanded ===  activity.id} timeout="auto" unmountOnExit>
              <CardContent>
               <div className="row">
-                <div className="col-md-8 col-sm-8 col-mo-8">
-                  <Typography paragraph>
-                    {activity.id}
+                <div className="col-md-6 col-sm-6 col-mo-6">
+                  <Typography variant="caption">
+                  <span className="fw-bold">Call Id:</span> {activity.id}
                   </Typography>
                 </div>
-                <div className="col-md-4 col-sm-4 col-mo-4">
-                  <Typography paragraph>
-              
-                    {activity.via}
+                <div className="col-md-6 col-sm-6 col-mo-6">
+                  <Typography variant="caption">
+                  <span className="fw-bold">Duration:</span> {activity.duration} seconds
                   </Typography>
                 </div>
                 <div className="col-md-8 col-sm-8 col-mo-8">
-                <Typography paragraph>
-              
-              {activity.duration} seconds
-            </Typography>
+                <Typography variant="caption">
+                <span className="fw-bold">Via:</span> {activity.via}
+                </Typography>
                 </div>
               </div>
              </CardContent>

@@ -83,7 +83,7 @@ const App = () => {
 
   return (
     <div className='container'>
-      <div className="row">
+      <div className="row menu-design">
         <div className="col-md-3 col-sm-3 col-mo-3">
           <Header/>
         </div>

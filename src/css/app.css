@@ -35,8 +35,13 @@
   
 }
 
-/* Defining grid system for mobile size devices */
+/* To design menu shadow and set background color. */
+.menu-design {
+  background: cadetblue;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, .9);
+}
 
+/* Defining grid system for mobile size devices. */
 @media (max-width: 575.98px) { 
 
   .col-mo-2 {
@@ -49,6 +54,10 @@
 
   .col-mo-4 {
     width: 33.33%;
+  }
+
+  .col-mo-6 {
+    width: 50%;
   }
 
   .col-mo-7 {
